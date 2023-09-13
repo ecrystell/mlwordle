@@ -34,6 +34,9 @@ with open("ml heroes.csv", "r") as f:
         print(row)
         
 with open("realmlheroes.csv", 'w') as newfile:
-    for row in result:
-        newfile.write(row)
+    for row in result[1:]:
+        for item in row:
+            newfile.write(str(item))
+            newfile.write(',')
+        newfile.write('\n')
     
