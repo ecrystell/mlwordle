@@ -36,7 +36,14 @@ with open("ml heroes.csv", "r") as f:
 with open("realmlheroes.csv", 'w') as newfile:
     for row in result[1:]:
         for item in row:
-            newfile.write(str(item))
+            if isinstance(item, list):
+                item = str(item).replace(',', ' |')
+                item = item.replace('[', '')
+                item = item.replace(']', '')
+                item = item.replace("'", '')
+
+
+            newfile.write(item)
             newfile.write(',')
         newfile.write('\n')
     
