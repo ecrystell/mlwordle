@@ -12,10 +12,6 @@ def connect_db(db_path):
     except Error as e:
         print(e)
 
-        
-db_filename = "mlheroes.db"
-conn = connect_db(db_filename)
-
 def create_table(conn):
     sql = '''CREATE TABLE heroes(
             Serial INTEGER UNIQUE PRIMARY KEY,
@@ -31,8 +27,6 @@ def create_table(conn):
         conn.execute(sql)
     except Error as e:
         print(e)
-
-create_table(conn)
    
 def write_db(conn,data):
     sql = '''INSERT INTO heroes VALUES(?,?,?,?,?,?,?,?)'''
@@ -51,6 +45,10 @@ def read_csv(filepath):
         write_db(conn,item)
     conn.commit()
     csvfile.close()
+
+db_filename = "mlheroes.db"
+conn = connect_db(db_filename)
+create_table(conn)
 read_csv('realmlheroes.csv')
 conn.close()
 
