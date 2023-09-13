@@ -1,119 +1,120 @@
-1,Miya,Marksman,Finisher | Damage,Gold Laner,2016,10800,399,
-2,Balmond,Fighter,Damage | Regen,EXP Laner,2016,6500,299,
-3,Saber,Assassin,Charge | Finisher,Jungler,2016,6500,299,
-4,Alice,Mage | Tank,Charge | Regen,Mid Laner,2016,15000,399,
-5,Nana,Mage,Poke | Burst,Mid Laner,2016,6500,299,
-6,Tigreal,Tank | Support,Crowd Control,Roamer,2016,6500,299,
-7,Alucard,Fighter | Assassin,Chase | Damage,EXP Laner,2016,15000,399,
-8,Karina,Assassin,Finisher,Jungler,2016,32000,599,
-9,Akai,Tank | Support,Guard,Roamer,2016,32000,599,
-10,Franco,Tank | Support,Initiator | Control,Roamer,2016,32000,749,
-11,Bane,Fighter | Mage,Push | Burst,EXP Laner,2016,6500,299,
-12,Bruno,Marksman,Finisher | Burst,Gold Laner,2016,15000,399,
-13,Clint,Marksman,Finisher | Burst,Gold Laner,2016,15000,399,
-14,Rafaela,Support,Regen | Guard,Roamer,2016,6500,299,
-15,Eudora,Mage,Control | Burst,Mid Laner,2016,2000,299,
-16,Zilong,Fighter | Assassin,Chase | Damage,EXP Laner,2016,15000,399,
-17,Fanny,Assassin,Chase | Finisher,Jungler,2016,24000,499,
-18,Layla,Marksman,Finisher | Damage,Gold Laner,2016,2000,299,
-19,Minotaur,Tank | Support,Crowd Control,Roamer,2016,15000,399,
-20,Lolita,Support | Tank,Guard,Roamer,2016,32000,599,
-21,Hayabusa,Assassin,Chase | Burst,Jungler,2016,32000,599,
-23,Gord,Mage,Poke | Burst,Mid Laner,2016,24000,499,
-24,Natalia,Assassin,Chase | Finisher,Jungler,2016,32000,599,
-25,Kagura,Mage,Poke | Finisher,Mid Laner,2016,32000,599,
-26,Chou,Fighter,Chase | Control,EXP Laner,2016,24000,499,
-27,Sun,Fighter,Push | Damage,EXP Laner,2016,32000,599,
-28,Alpha,Fighter,Charge | Damage,EXP Laner,2017,32000,599,
-29,Ruby,Fighter,Regen,EXP Laner,2017,32000,599,
-30,Yi Sun-shin,Assassin | Marksman,Finisher | Chase,Jungler,2017,32000,599,
-31,Moskov,Marksman,Finisher | Chase,Gold Laner,2017,32000,599,
-32,Johnson,Tank | Support,Support,Roamer,2017,32000,599,
-33,Cyclops,Mage,Poke | Control,Mid Laner,2017,15000,399,
-34,Estes,Support,Regen | Guard,Roamer,2017,24000,499,
-35,Hilda,Fighter | Tank,Damage | Regen,EXP Laner,2017,24000,499,
-36,Aurora,Mage,Poke,Mid Laner,2017,24000,499,
-37,Lapu-Lapu,Fighter,Chase | Burst,EXP Laner,2017,32000,599,
-38,Vexana,Mage,Poke | Control,Mid Laner,2017,32000,599,
-39,Roger,Fighter | Marksman,Finisher | Burst,EXP Laner,2017,24000,499,
-40,Karrie,Marksman,Finisher | Damage,Gold Laner,2017,24000,499,
-41,Gatotkaca,Tank | Fighter,Burst,EXP Laner,2017,32000,599,
-42,Harley,Assassin | Mage,Burst | Poke,Jungler,2017,32000,599,
-43,Irithel,Marksman,Finisher | Burst,Gold Laner,2017,32000,599,
-44,Grock,Tank | Fighter,Initiator,Roamer,2017,32000,599,
-45,Argus,Fighter,Charge | Burst,EXP Laner,2017,32000,599,
-47,Lancelot,Assassin,Chase | Burst,Jungler,2017,32000,599,
-48,Diggie,Support,Guard | Poke,Roamer,2017,24000,499,
-49,Hylos,Tank,Guard | Initiator,Roamer,2017,32000,599,
-50,Zhask,Mage,Chase | Damage,Mid Laner,2017,32000,599,
-51,Helcurt,Assassin,Push | Burst,Jungler,2017,32000,599,
-52,Pharsa,Mage,Burst | Poke,Mid Laner,2017,32000,599,
-53,Lesley,Marksman | Assassin,Finisher | Burst,Gold Laner,2018,32000,599,
-54,Jawhead,Fighter,Charge | Burst,EXP Laner,2018,32000,599,
-55,Angela,Support,Guard | Support,Roamer,2018,24000,499,
-56,Gusion,Assassin,Burst,Jungler,2018,32000,599,
-57,Valir,Mage,Damage | Guard,Mid Laner,2018,32000,599,
-58,Martis,Fighter,Finisher | Charge,EXP Laner,2018,32000,599,
-59,Uranus,Tank,Regen,EXP Laner,2018,32000,599,
-60,Hanabi,Marksman,Finisher | Damage,Gold Laner,2018,32000,599,
-61,Chang'e,Mage,Poke | Burst,Mid Laner,2018,32000,599,
-62,Kaja,Support | Fighter,Control | Charge,EXP Laner,2018,32000,599,
-63,Selena,Assassin | Mage,Initiator | Finisher,Jungler,2018,32000,599,
-64,Aldous,Fighter,Burst | Support,EXP Laner,2018,32000,599,
-65,Claude,Marksman,Burst | Chase,Gold Laner,2018,32000,599,
-66,Vale,Mage,Burst,Mid Laner,2019,32000,599,
-67,Leomord,Fighter,Chase | Burst,EXP Laner,2018,32000,599,
-68,Lunox,Mage,Burst | Damage,Mid Laner,2018,32000,599,
-69,Hanzo,Assassin,Poke | Burst,Jungler,2018,32000,599,
-70,Belerick,Tank,Regen,Roamer,2018,32000,599,
-71,Kimmy,Marksman | Mage,Damage,Gold Laner,2018,32000,599,
-72,Thamuz,Fighter,Chase | Damage,EXP Laner,2018,32000,599,
-73,Harith,Mage,Chase | Damage,Mid Laner,2018,32000,599,
-74,Minsitthar,Fighter,Initiator,EXP Laner,2018,32000,599,
-75,Kadita,Mage | Assassin,Burst | Charge,Mid Laner,2018,32000,599,
-76,Faramis,Support | Mage,Guard | Charge,Roamer,2019,32000,599,
-77,Badang,Fighter,Charge | Burst,EXP Laner,2019,32000,599,
-78,Khufra,Tank | Support,Initiator,Roamer,2019,32000,599,
-79,Granger,Marksman,Burst | Finisher,Gold Laner,2019,32000,599,
-80,Guinevere,Fighter,Burst,EXP Laner,2019,32000,599,
-81,Esmeralda,Mage | Tank,Regen,Mid Laner,2019,32000,599,
-82,Terizla,Fighter,Burst,EXP Laner,2019,32000,599,
-83,X.Borg,Fighter,Regen | Burst,EXP Laner,2019,32000,599,
-84,Ling,Assassin,Chase | Burst,Jungler,2019,32000,599,
-85,Dyrroth,Fighter,Charge | Burst,EXP Laner,2019,32000,599,
-86,Lylia,Mage,Push | Damage,Mid Laner,2019,32000,599,
-87,Baxia,Tank,Support | Damage,Roamer,2019,32000,599,
-88,Masha,Fighter,Push | Damage,EXP Laner,2019,32000,599,
-89,Wanwan,Marksman,Finisher | Burst,Gold Laner,2019,32000,599,
-90,Silvanna,Fighter,Initiator,EXP Laner,2019,32000,599,
-91,Carmilla,Support | Tank,Damage,Roamer,2020,32000,599,
-92,Cecilion,Mage,Poke | Burst,Mid Laner,2020,32000,599,
-93,Atlas,Tank | Support,Initiator,Roamer,2020,32000,599,
-94,Popol,Marksman,Push | Burst,Gold Laner,2020,32000,599,
-95,Yu Zhong,Fighter,Regen | Damage,EXP Laner,2020,32000,599,
-96,Luo Yi,Mage,Support,Mid Laner,2020,32000,599,
-97,Benedetta,Assassin | Fighter,Chase | Burst,EXP Laner,2020,32000,599,
-98,Khaleed,Fighter,Damage | Regen,EXP Laner,2020,32000,599,
-99,Barats,Tank | Fighter,Damage,EXP Laner,2020,32000,599,
-100,Brody,Marksman,Burst | Finisher,Gold Laner,2020,32000,599,
-101,Yve,Mage,Poke | Burst,Mid Laner,2021,32000,599,
-102,Mathilda,Support | Assassin,Initiator | Guard,Roamer,2020,32000,599,
-103,Paquito,Fighter | Assassin,Chase | Damage,EXP Laner,2021,32000,599,
-104,Gloo,Tank,Regen | Control,EXP Laner,2021,32000,599,
-105,Beatrix,Marksman,Finisher | Damage,Gold Laner,2021,32000,599,
-106,Phoveus,Fighter,Chase | Control,EXP Laner,2021,32000,599,
-107,Natan,Marksman,Burst,Gold Laner,2021,32000,599,
-108,Aulus,Fighter,Damage,EXP Laner,2021,32000,599,
-109,Aamon,Assassin,Burst,Jungler,2021,32000,599,
-110,Floryn,Support,Poke | Guard,Roamer,2021,32000,599,
-111,Valentina,Mage,Burst | Finisher,Mid Laner,2021,32000,599,
-112,Edith,Tank | Marksman,Control | Burst,EXP Laner,2021,32000,599,
-113,Yin,Fighter | Assassin,Burst | Control,EXP Laner,2022,32000,599,
-114,Melissa,Marksman,Finisher | Damage,Gold Laner,2022,32000,599,
-115,Xavier,Mage,Damage | Guard,Mid Laner,2022,32000,599,
-116,Julian,Fighter | Mage,Chase,EXP Laner,2022,32000,599,
-117,Fredrinn,Fighter | Tank,Damage | Chase,EXP Laner,2022,32000,599,
-118,Joy,Assassin,Chase | Damage,EXP Laner,2022,32000,599,
-120,Arlott,Fighter | Assassin,Charge | Burst,EXP Laner,32000,599,
-119,Novaria,Mage,Burst | Poke,Mid Laner,32000,599,
-121,Ixia,Marksman,Finisher | Damage,Gold Laner,32000,599,
+S/N,Hero Name,Hero Role,Hero Type,Hero Lane,Release Year,Gold,Diamond
+1,Miya,Marksman,Finisher | Damage,Gold Laner,2016,10800,399
+2,Balmond,Fighter,Damage | Regen,EXP Laner,2016,6500,299
+3,Saber,Assassin,Charge | Finisher,Jungler,2016,6500,299
+4,Alice,Mage | Tank,Charge | Regen,Mid Laner,2016,15000,399
+5,Nana,Mage,Poke | Burst,Mid Laner,2016,6500,299
+6,Tigreal,Tank | Support,Crowd Control,Roamer,2016,6500,299
+7,Alucard,Fighter | Assassin,Chase | Damage,EXP Laner,2016,15000,399
+8,Karina,Assassin,Finisher,Jungler,2016,32000,599
+9,Akai,Tank | Support,Guard,Roamer,2016,32000,599
+10,Franco,Tank | Support,Initiator | Control,Roamer,2016,32000,749
+11,Bane,Fighter | Mage,Push | Burst,EXP Laner,2016,6500,299
+12,Bruno,Marksman,Finisher | Burst,Gold Laner,2016,15000,399
+13,Clint,Marksman,Finisher | Burst,Gold Laner,2016,15000,399
+14,Rafaela,Support,Regen | Guard,Roamer,2016,6500,299
+15,Eudora,Mage,Control | Burst,Mid Laner,2016,2000,299
+16,Zilong,Fighter | Assassin,Chase | Damage,EXP Laner,2016,15000,399
+17,Fanny,Assassin,Chase | Finisher,Jungler,2016,24000,499
+18,Layla,Marksman,Finisher | Damage,Gold Laner,2016,2000,299
+19,Minotaur,Tank | Support,Crowd Control,Roamer,2016,15000,399
+20,Lolita,Support | Tank,Guard,Roamer,2016,32000,599
+21,Hayabusa,Assassin,Chase | Burst,Jungler,2016,32000,599
+23,Gord,Mage,Poke | Burst,Mid Laner,2016,24000,499
+24,Natalia,Assassin,Chase | Finisher,Jungler,2016,32000,599
+25,Kagura,Mage,Poke | Finisher,Mid Laner,2016,32000,599
+26,Chou,Fighter,Chase | Control,EXP Laner,2016,24000,499
+27,Sun,Fighter,Push | Damage,EXP Laner,2016,32000,599
+28,Alpha,Fighter,Charge | Damage,EXP Laner,2017,32000,599
+29,Ruby,Fighter,Regen,EXP Laner,2017,32000,599
+30,Yi Sun-shin,Assassin | Marksman,Finisher | Chase,Jungler,2017,32000,599
+31,Moskov,Marksman,Finisher | Chase,Gold Laner,2017,32000,599
+32,Johnson,Tank | Support,Support,Roamer,2017,32000,599
+33,Cyclops,Mage,Poke | Control,Mid Laner,2017,15000,399
+34,Estes,Support,Regen | Guard,Roamer,2017,24000,499
+35,Hilda,Fighter | Tank,Damage | Regen,EXP Laner,2017,24000,499
+36,Aurora,Mage,Poke,Mid Laner,2017,24000,499
+37,Lapu-Lapu,Fighter,Chase | Burst,EXP Laner,2017,32000,599
+38,Vexana,Mage,Poke | Control,Mid Laner,2017,32000,599
+39,Roger,Fighter | Marksman,Finisher | Burst,EXP Laner,2017,24000,499
+40,Karrie,Marksman,Finisher | Damage,Gold Laner,2017,24000,499
+41,Gatotkaca,Tank | Fighter,Burst,EXP Laner,2017,32000,599
+42,Harley,Assassin | Mage,Burst | Poke,Jungler,2017,32000,599
+43,Irithel,Marksman,Finisher | Burst,Gold Laner,2017,32000,599
+44,Grock,Tank | Fighter,Initiator,Roamer,2017,32000,599
+45,Argus,Fighter,Charge | Burst,EXP Laner,2017,32000,599
+47,Lancelot,Assassin,Chase | Burst,Jungler,2017,32000,599
+48,Diggie,Support,Guard | Poke,Roamer,2017,24000,499
+49,Hylos,Tank,Guard | Initiator,Roamer,2017,32000,599
+50,Zhask,Mage,Chase | Damage,Mid Laner,2017,32000,599
+51,Helcurt,Assassin,Push | Burst,Jungler,2017,32000,599
+52,Pharsa,Mage,Burst | Poke,Mid Laner,2017,32000,599
+53,Lesley,Marksman | Assassin,Finisher | Burst,Gold Laner,2018,32000,599
+54,Jawhead,Fighter,Charge | Burst,EXP Laner,2018,32000,599
+55,Angela,Support,Guard | Support,Roamer,2018,24000,499
+56,Gusion,Assassin,Burst,Jungler,2018,32000,599
+57,Valir,Mage,Damage | Guard,Mid Laner,2018,32000,599
+58,Martis,Fighter,Finisher | Charge,EXP Laner,2018,32000,599
+59,Uranus,Tank,Regen,EXP Laner,2018,32000,599
+60,Hanabi,Marksman,Finisher | Damage,Gold Laner,2018,32000,599
+61,Chang'e,Mage,Poke | Burst,Mid Laner,2018,32000,599
+62,Kaja,Support | Fighter,Control | Charge,EXP Laner,2018,32000,599
+63,Selena,Assassin | Mage,Initiator | Finisher,Jungler,2018,32000,599
+64,Aldous,Fighter,Burst | Support,EXP Laner,2018,32000,599
+65,Claude,Marksman,Burst | Chase,Gold Laner,2018,32000,599
+66,Vale,Mage,Burst,Mid Laner,2019,32000,599
+67,Leomord,Fighter,Chase | Burst,EXP Laner,2018,32000,599
+68,Lunox,Mage,Burst | Damage,Mid Laner,2018,32000,599
+69,Hanzo,Assassin,Poke | Burst,Jungler,2018,32000,599
+70,Belerick,Tank,Regen,Roamer,2018,32000,599
+71,Kimmy,Marksman | Mage,Damage,Gold Laner,2018,32000,599
+72,Thamuz,Fighter,Chase | Damage,EXP Laner,2018,32000,599
+73,Harith,Mage,Chase | Damage,Mid Laner,2018,32000,599
+74,Minsitthar,Fighter,Initiator,EXP Laner,2018,32000,599
+75,Kadita,Mage | Assassin,Burst | Charge,Mid Laner,2018,32000,599
+76,Faramis,Support | Mage,Guard | Charge,Roamer,2019,32000,599
+77,Badang,Fighter,Charge | Burst,EXP Laner,2019,32000,599
+78,Khufra,Tank | Support,Initiator,Roamer,2019,32000,599
+79,Granger,Marksman,Burst | Finisher,Gold Laner,2019,32000,599
+80,Guinevere,Fighter,Burst,EXP Laner,2019,32000,599
+81,Esmeralda,Mage | Tank,Regen,Mid Laner,2019,32000,599
+82,Terizla,Fighter,Burst,EXP Laner,2019,32000,599
+83,X.Borg,Fighter,Regen | Burst,EXP Laner,2019,32000,599
+84,Ling,Assassin,Chase | Burst,Jungler,2019,32000,599
+85,Dyrroth,Fighter,Charge | Burst,EXP Laner,2019,32000,599
+86,Lylia,Mage,Push | Damage,Mid Laner,2019,32000,599
+87,Baxia,Tank,Support | Damage,Roamer,2019,32000,599
+88,Masha,Fighter,Push | Damage,EXP Laner,2019,32000,599
+89,Wanwan,Marksman,Finisher | Burst,Gold Laner,2019,32000,599
+90,Silvanna,Fighter,Initiator,EXP Laner,2019,32000,599
+91,Carmilla,Support | Tank,Damage,Roamer,2020,32000,599
+92,Cecilion,Mage,Poke | Burst,Mid Laner,2020,32000,599
+93,Atlas,Tank | Support,Initiator,Roamer,2020,32000,599
+94,Popol,Marksman,Push | Burst,Gold Laner,2020,32000,599
+95,Yu Zhong,Fighter,Regen | Damage,EXP Laner,2020,32000,599
+96,Luo Yi,Mage,Support,Mid Laner,2020,32000,599
+97,Benedetta,Assassin | Fighter,Chase | Burst,EXP Laner,2020,32000,599
+98,Khaleed,Fighter,Damage | Regen,EXP Laner,2020,32000,599
+99,Barats,Tank | Fighter,Damage,EXP Laner,2020,32000,599
+100,Brody,Marksman,Burst | Finisher,Gold Laner,2020,32000,599
+101,Yve,Mage,Poke | Burst,Mid Laner,2021,32000,599
+102,Mathilda,Support | Assassin,Initiator | Guard,Roamer,2020,32000,599
+103,Paquito,Fighter | Assassin,Chase | Damage,EXP Laner,2021,32000,599
+104,Gloo,Tank,Regen | Control,EXP Laner,2021,32000,599
+105,Beatrix,Marksman,Finisher | Damage,Gold Laner,2021,32000,599
+106,Phoveus,Fighter,Chase | Control,EXP Laner,2021,32000,599
+107,Natan,Marksman,Burst,Gold Laner,2021,32000,599
+108,Aulus,Fighter,Damage,EXP Laner,2021,32000,599
+109,Aamon,Assassin,Burst,Jungler,2021,32000,599
+110,Floryn,Support,Poke | Guard,Roamer,2021,32000,599
+111,Valentina,Mage,Burst | Finisher,Mid Laner,2021,32000,599
+112,Edith,Tank | Marksman,Control | Burst,EXP Laner,2021,32000,599
+113,Yin,Fighter | Assassin,Burst | Control,EXP Laner,2022,32000,599
+114,Melissa,Marksman,Finisher | Damage,Gold Laner,2022,32000,599
+115,Xavier,Mage,Damage | Guard,Mid Laner,2022,32000,599
+116,Julian,Fighter | Mage,Chase,EXP Laner,2022,32000,599
+117,Fredrinn,Fighter | Tank,Damage | Chase,EXP Laner,2022,32000,599
+118,Joy,Assassin,Chase | Damage,EXP Laner,2022,32000,599
+120,Arlott,Fighter | Assassin,Charge | Burst,EXP Laner,2023,32000,599
+119,Novaria,Mage,Burst | Poke,Mid Laner,2023,32000,599
+121,Ixia,Marksman,Finisher | Damage,Gold Laner,2023,32000,599
