@@ -20,3 +20,11 @@ def add_column(name, columntype):
                     ''', (name, columntype))
     except Error as e:
         print(e)
+
+def insert_data(heroes, colum, value):
+    for h in heroes:
+        conn.execute('''UPDATE heroes
+                        SET ? = ?
+                        WHERE Name = ?''', (colum, value, h))
+        print("updated {} for {}".format(colum, h))
+    
