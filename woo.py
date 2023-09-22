@@ -76,7 +76,7 @@ while True:
         break
     
     guess = conn.execute('''SELECT * FROM heroes WHERE Name = ?''', (g,)).fetchone()
-    corrects = [attempt, None, None, None, "higher", None, None]
+    corrects = [attempt, None, None, None, "higher", None, None, None]
     if guess[1] == ans[1]:
         print('you win')
         break
@@ -94,9 +94,9 @@ while True:
         else:
             corrects[i-1] = False
     
-    print(';{:<10};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4}'.format(guess[1],guess[2],guess[3],guess[4],guess[5],guess[6],guess[7]))
+    print(';{:<10};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4};{:<20}'.format(guess[1],guess[2],guess[3],guess[4],guess[5],guess[6],guess[7], guess[8]))
     
-    print(';Try: {:<5};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4}'.format(corrects[0],corrects[1],corrects[2],corrects[3],corrects[4],corrects[5],corrects[6]))
+    print(';Try: {:<5};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4};{:<20}'.format(corrects[0],corrects[1],corrects[2],corrects[3],corrects[4],corrects[5],corrects[6],corrects[7]))
 
     
 conn.close()
