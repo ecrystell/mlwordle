@@ -21,7 +21,7 @@ def insert_hero(name, role, herotype, lane, year, gold, diamond):
 def add_column(name, columntype):
     try:
         conn.execute('''ALTER TABLE heroes
-                        ADD Race TEXT;''')
+                        ADD {} {};'''.format(name,columntype))
         print('colum inserted')
     except Error as e:
         print(e)
@@ -29,19 +29,19 @@ def add_column(name, columntype):
 def insert_data(heroes, colum, value):
     for h in heroes:
         conn.execute('''UPDATE heroes
-                        SET Race = ?
-                        WHERE Name = ?''', (value, h))
+                        SET {} = ?
+                        WHERE Name = ?'''.format(colum), (value, h))
         
         conn.commit()
-        check = conn.execute('''SELECT Race FROM heroes
-                             WHERE Name = ?''',(h,)).fetchone()
+        check = conn.execute('''SELECT {} FROM heroes
+                             WHERE Name = ?'''.format(colum),(h,)).fetchone()
         if check:
             print("updated {} for {}".format(colum, h))
         
     
-#insert_hero("Freya", "Fighter", "Chase | Damage", "EXP Laner", 2017, 0, 599)
-#insert_hero("Odette", "Mage", "Burst | Poke", "Mid Laner", 2017, 32000, 599)
-#add_column("Race", "TEXT")
+# #insert_hero("Freya", "Fighter", "Chase | Damage", "EXP Laner", 2017, 0, 599)
+# #insert_hero("Odette", "Mage", "Burst | Poke", "Mid Laner", 2017, 32000, 599)
+# #add_column("Race", "TEXT")
 
 insert_data(["Tigreal", "Alucard", "Franco", "Clint", "Zilong", "Fanny",
             "Hayabusa", "Natalia", "Layla", "Kagura", "Chou", "Ruby",
@@ -88,6 +88,25 @@ insert_data(["Belerick"], "Race", "Tree Nymph")
 insert_data(["Barats"], "Race", "Politan")
 insert_data(["Gloo"], "Race", "Daktec")
 insert_data(["Novaria"], "Race", "Star")
+            
+import csv
+add_column("Gender", "TEXT")
+female = []
+male = []
+unknown = []
+with open("gender.csv", 'r') as csvfile:
+    csvreader = csv.reader(csvfile)
+    next(csvreader)
+    for row in csvreader:
+        if row[-1] == "female":
+            female.append(row[1])
+        elif row[-1] == "male":
+            male.append(row[1])
+        else:
+            unknown.append(row[1])
 
+insert_data(female, "Gender", "Female")
+insert_data(male, "Gender", "Male")
+insert_data(unknown, "Gender", "Genderless")
 
 conn.close()
