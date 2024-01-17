@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        welcome to mobile legends (wordle)
+    </head>
+    <body>
+        <h2>Input Guess</h2>
+        <form action="{{url_for('index')}}" method="POST">
+            <input type="text" name="hero" id="hero">
+            <input type="submit">
+        </form>
+
+        <table>
+            <tr>
+                {% for h in headers %}
+                <th>{{ h }}</th>
+                {% endfor %}
+            </tr>
+
+        {% for guessidx in range(1,attempt+1) %}
+            <tr>
+                {% for g in totalguess[guessidx] %}
+                <td>{{ g }}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for c in totalcorrects[guessidx-1] %}
+                <td>{{ c }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </body>
+</html>

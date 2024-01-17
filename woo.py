@@ -61,8 +61,13 @@ def generate_hero():
 
 def all_heroes():
     return conn.execute('''SELECT Name FROM heroes''').fetchall()
-ans = generate_hero()
+
+
+
+    
+
 attempt = 0
+ans = generate_hero()
 
 while True:
     attempt += 1
@@ -78,8 +83,7 @@ while True:
     guess = conn.execute('''SELECT * FROM heroes WHERE Name = ?''', (g,)).fetchone()
     corrects = [attempt, None, None, None, "higher", None, None, None, None]
     if guess[1] == ans[1]:
-        print('you win')
-        break
+        print('win')
     for i in range(2, len(guess)):
         if i == 5:
             if guess[5] < ans[5]:
@@ -93,10 +97,12 @@ while True:
             corrects[i-1] = True
         else:
             corrects[i-1] = False
-    
-    print(';{:<10};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4};{:<20};{:<20}'.format(guess[1],guess[2],guess[3],guess[4],guess[5],guess[6],guess[7], guess[8], guess[9]))
-    
-    print(';Try: {:<5};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4};{:<20};{:<20}'.format(corrects[0],corrects[1],corrects[2],corrects[3],corrects[4],corrects[5],corrects[6],corrects[7], corrects[8]))
+        
+
+
+        print(';{:<10};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4};{:<20};{:<20}'.format(guess[1],guess[2],guess[3],guess[4],guess[5],guess[6],guess[7], guess[8], guess[9]))
+        
+        print(';Try: {:<5};{:<25};{:<25};{:<15};{:<10};{:<6};{:<4};{:<20};{:<20}'.format(corrects[0],corrects[1],corrects[2],corrects[3],corrects[4],corrects[5],corrects[6],corrects[7], corrects[8]))
 
     
 conn.close()
