@@ -21,29 +21,31 @@ def generate_hero(conn):
     hero = conn.execute('''SELECT * FROM heroes WHERE Serial = ?''', (heroidx,)).fetchone()
     return hero
 
+def all_heroes(conn):
+    return conn.execute('''SELECT Name FROM heroes''').fetchall()
 
 
 def doiwin(g, ans, attempt, conn):
     
-    guess = conn.execute('''SELECT * FROM heroes WHERE Name = ?''', (g,)).fetchone()
-    print(guess)
-    corrects = [attempt, None, None, None, "higher", None, None, None, None]
+    guess = list(conn.execute('''SELECT * FROM heroes WHERE Name = ?''', (g,)).fetchone())
+    corrects = [attempt,None, None, None, None, "higher", None, None, None, None]
     if guess[1] == ans[1]:
-        return 'you win', None
+        print('win')
     for i in range(2, len(guess)):
         if i == 5:
             if guess[5] < ans[5]:
-                corrects[4] = "higher"
+                corrects[5] = "higher"
             elif guess[5] > ans[5]:
-                corrects[4] = "lower"
+                corrects[5] = "lower"
             else:
-                corrects[4] = True
+                corrects[5] = True
             continue
         if guess[i] == ans[i]:
-            corrects[i-1] = True
+            corrects[i] = True
         else:
-            corrects[i-1] = False
+            corrects[i] = False
         
+    guess[0] = attempt
     return guess, corrects
 
 
@@ -61,26 +63,35 @@ totalcorrects = []
 def index():
     global answer
     global attempt
+    global totalguess
+    global totalcorrects
     if request.method == "POST":
         db_filename = "mlheroes.db"
         conn = connect_db(db_filename)
         hero = request.form["hero"]
-        print(hero)
+        # print(hero)
+        # print(all_heroes(conn))
+        if (hero,) in all_heroes(conn):
 
-        guess, corrects = doiwin(hero, answer, attempt, conn)
-        print(guess)
-        totalguess.append(guess)
-        totalcorrects.append(corrects)
-        print(totalguess)
-        attempt += 1
+            guess, corrects = doiwin(hero, answer, attempt, conn)
+            # print(answer)
+            # print(guess)
+            totalguess.append(guess)
+            totalcorrects.append(corrects)
+            # print(totalguess)
+            attempt += 1
         conn.close()
         return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers, attempt=attempt)
     else:
         db_filename = "mlheroes.db"
         conn = connect_db(db_filename)
         answer = generate_hero(conn)
+        print(answer)
         conn.close()
-        return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers, attempt=attempt)
+        totalguess = []
+        totalcorrects = []
+        attempt = 0
+        return render_template('index.html', totalguess=[], totalcorrects=[], headers=headers, attempt=0)
            
 
 if __name__ == "__main__":
