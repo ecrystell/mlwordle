@@ -5,8 +5,7 @@ import csv
 import random
 import sqlite3
 from sqlite3 import Error
-idx = random.randint(1,121)
-answer = ''
+
 
 def connect_db(db_path):
     try:
@@ -27,6 +26,7 @@ def generate_hero(conn):
 def doiwin(g, ans, attempt, conn):
     
     guess = conn.execute('''SELECT * FROM heroes WHERE Name = ?''', (g,)).fetchone()
+    print(guess)
     corrects = [attempt, None, None, None, "higher", None, None, None, None]
     if guess[1] == ans[1]:
         return 'you win', None
@@ -50,28 +50,34 @@ def doiwin(g, ans, attempt, conn):
 
 app = Flask(__name__)
 attempt = 0
-
+answer = ''
 headers = ["Attempt","Hero Name","Hero Role","Hero Type","Hero Lane","Release Year","Gold","Diamond","Race", "Gender"]
 totalguess = []
 totalcorrects = []
+
 
 @app.route('/index/')
 @app.route('/', methods = ["POST", "GET"])
 def index():
     global answer
+    global attempt
     if request.method == "POST":
         db_filename = "mlheroes.db"
         conn = connect_db(db_filename)
         hero = request.form["hero"]
+        print(hero)
+
         guess, corrects = doiwin(hero, answer, attempt, conn)
+        print(guess)
         totalguess.append(guess)
         totalcorrects.append(corrects)
+        print(totalguess)
+        attempt += 1
         conn.close()
         return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers, attempt=attempt)
     else:
         db_filename = "mlheroes.db"
         conn = connect_db(db_filename)
-       
         answer = generate_hero(conn)
         conn.close()
         return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers, attempt=attempt)
