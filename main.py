@@ -78,10 +78,11 @@ def index():
             # print(guess)
             totalguess.append(guess)
             totalcorrects.append(corrects)
+            print(totalcorrects)
             # print(totalguess)
             attempt += 1
         conn.close()
-        return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers, attempt=attempt)
+        return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers, attempt=attempt-1)
     else:
         db_filename = "mlheroes.db"
         conn = connect_db(db_filename)
@@ -91,7 +92,7 @@ def index():
         totalguess = []
         totalcorrects = []
         attempt = 0
-        return render_template('index.html', totalguess=[], totalcorrects=[], headers=headers, attempt=0)
+        return render_template('index.html', totalguess=[], totalcorrects=[], headers=headers, attempt=-1)
            
 
 if __name__ == "__main__":
