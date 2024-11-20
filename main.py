@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-uri = os.getenv('uri')
+uri = os.getenv('URI')
 
 def connect_db():
     
