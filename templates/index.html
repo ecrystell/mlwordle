@@ -8,7 +8,21 @@
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch the IP address from the API
+            fetch("https://api.ipify.org?format=json")
+                .then(response => response.json())
+                .then(data => {
+                    // Display the IP address on the screen
+                    console.log(data.ip);
+                })
+                .catch(error => {
+                    console.error("Error fetching IP address:", error);
+                });
+            });
+
         function doiwin() {
+            
             var guess = document.getElementById("hero").value;
             console.log(guess);
             $.ajax({
@@ -19,18 +33,19 @@
                 dataType: 'json',
                 success: function(result) {
                     var guess = result["guess"];
+                    console.log(guess);
                     var corrects = result["corrects"];
-                    var headers = result["headers"];
+                    //var headers = result["headers"];
 
                     var table = document.getElementById("submission");
                     var row = table.insertRow(1);
                     var attempt = row.insertCell(0);
                     attempt.innerHTML = result["attempt"];
-                    
+
                     // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
                     for (var i = 0; i < guess.length; i++) {
                         var cell = row.insertCell(i+1);
-                        cell.innerHTML = guess[headers[i]];
+                        cell.innerHTML = guess[i];
                         if (i == 2) {
                             if (corrects[i] == true) {
                                 cell.bgColor = "Green";
@@ -41,9 +56,9 @@
                             }
                         } else if (i == 4) {
                             if (corrects[i] == "higher") {
-                                cell.background = "{{ url_for('static', filename='images/arrowup.png') }}";
+                                cell.backgroundImage = "url(static/images/arrowup.png)";
                             } else if (corrects[i] == "lower") {
-                                cell.background = "{{ url_for('static', filename='images/arrowdown.png') }}";
+                                cell.backgroundImage = "url(static/images/arrowdown.png)";
                             } else {
                                 cell.bgColor = "Green";
                             }
@@ -75,37 +90,8 @@
                 <th>{{ h }}</th>
                 {% endfor %}
             </tr>
-            {% for attempt in range(totalguess|length) %}
-            <tr>
-                <td>{{ attempt+1 }}</td>
-                {% for g in range(0,9) %}
-                    {% if g == 2 %}
-                        {% if totalcorrects[attempt][g] == True %}
-                        <td bgcolor="green">{{ totalguess[attempt][g] }}</td>
-                        {% elif totalcorrects[attempt][g] == False %}
-                        <td bgcolor="red">{{ totalguess[attempt][g] }}</td>
-                        {% else %}
-                        <td bgcolor="yellow">{{ totalguess[attempt][g] }}</td>
-                        {% endif %}
-
-                    {% elif g == 4 %}
-                        {% if totalcorrects[attempt][g] == "higher" %}
-                        <td background="{{ url_for('static', filename='images/arrowup.png') }}">{{ totalguess[attempt][g] }}</td>
-                        {% elif totalcorrects[attempt][g] == "lower" %}
-                        <td background="{{ url_for('static', filename='images/arrowdown.png') }}">{{ totalguess[attempt][g] }}</td>
-                        {% else %}
-                        <td bgcolor="green">{{ totalguess[attempt][g] }}</td>
-                        {% endif %}
-                    {% elif totalcorrects[attempt][g] == True %}
-                    <td bgcolor="green">{{ totalguess[attempt][g] }}</td>
-                    {% else %}
-                    <td bgcolor="red">{{ totalguess[attempt][g] }}</td>
-                    {% endif %}
-                {% endfor %}
-            </tr>
-            {% endfor %}
             
-        
+            
         </table>
     </body>
 </html>

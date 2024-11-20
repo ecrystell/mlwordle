@@ -27,8 +27,8 @@ table {
 
 td, th {
     background-size: 75%;
-    height: 40px;
+    height: fit-content;
     width: fit-content;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
+    padding: 0.5vw;
+    
 }
