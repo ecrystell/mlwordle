@@ -19,7 +19,7 @@ table, td, tr, th {
 }
 
 td, th {
-    background-size: 100%;
+    background-size: 75%;
     height: 40px;
     width: 100px;
 }

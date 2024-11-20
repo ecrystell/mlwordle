@@ -6,14 +6,66 @@
         <link rel="stylesheet" href="static/style.css">
 
     </head>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function doiwin() {
+            var guess = document.getElementById("hero").value;
+            console.log(guess);
+            $.ajax({
+                type: "POST",
+                url: "/",
+                data: JSON.stringify([{"hero": guess}]),
+                contentType: "application/json",
+                dataType: 'json',
+                success: function(result) {
+                    var guess = result["guess"];
+                    var corrects = result["corrects"];
+                    var headers = result["headers"];
+
+                    var table = document.getElementById("submission");
+                    var row = table.insertRow(1);
+                    var attempt = row.insertCell(0);
+                    attempt.innerHTML = result["attempt"];
+                    
+                    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                    for (var i = 0; i < guess.length; i++) {
+                        var cell = row.insertCell(i+1);
+                        cell.innerHTML = guess[headers[i]];
+                        if (i == 2) {
+                            if (corrects[i] == true) {
+                                cell.bgColor = "Green";
+                            } else if (corrects[i] == false) {
+                                cell.bgColor = "Red";
+                            } else {
+                                cell.bgColor = "Yellow";
+                            }
+                        } else if (i == 4) {
+                            if (corrects[i] == "higher") {
+                                cell.background = "{{ url_for('static', filename='images/arrowup.png') }}";
+                            } else if (corrects[i] == "lower") {
+                                cell.background = "{{ url_for('static', filename='images/arrowdown.png') }}";
+                            } else {
+                                cell.bgColor = "Green";
+                            }
+                        } else if (corrects[i] == true) {
+                            cell.bgColor = "Green";
+                        } else {
+                            cell.bgColor = "Red";
+                        }
+                    }
+                    
+                } 
+            });
+        }
+
+    </script>
     <body>
         <div>
         <h2>Input Guess</h2>
-        <form action="{{url_for('index')}}" method="POST">
-            <input type="text" name="hero" id="hero">
-            <br>
-            <input type="submit">
+        
+        <input type="text" name="hero" id="hero"></input>
+        <br>
+        <input type="submit" onclick="doiwin()">
         </form>
         <br><br>
         

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, jsonify
 
 import pymongo
 import random
@@ -107,21 +107,26 @@ def index():
     if request.method == "POST":
         
         conn = connect_db()
-        hero = request.form["hero"]
-        # print(hero)
+        hero = request.get_json()[0]["hero"]
         # print(all_heroes(conn))
         if {"Name": hero} in all_heroes(conn):
 
             guess, corrects = doiwin(hero, answer, attempt, conn)
             # print(answer)
             # print(guess)
-            totalguess.append(list(guess.values()))
-            totalcorrects.append(list(corrects.values()))
+            h = list(guess.keys())
+            guess = list(guess.values())
+            corrects = list(corrects.values())
             #print(totalcorrects)
             #print(totalguess)
             attempt += 1
         client.close()
-        return render_template('index.html', totalguess=totalguess, totalcorrects=totalcorrects, headers=headers)
+        result = {"guess": guess,
+                  "corrects": corrects,
+                  "headers": h,
+                  "attempt": attempt-1}
+        
+        return jsonify(result)
     else:
         
         conn = connect_db()
