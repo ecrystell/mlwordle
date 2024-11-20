@@ -2,7 +2,12 @@ import sqlite3
 import pymongo
 import csv
 
-uri = "mongodb+srv://cherry:aWNCvzjkSjXFpH0o@cluster0.kyh3c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+uri = os.getenv('URI')
 client = pymongo.MongoClient(uri, server_api=pymongo.server_api.ServerApi(
  version="1", strict=True, deprecation_errors=True))
 data = []
