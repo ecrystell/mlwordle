@@ -23,8 +23,18 @@ def connect_db():
 
 
 def generate_hero(conn):
-    heroidx = random.randint(1, 123)
-    hero = conn.find_one({"Serial": heroidx}, {"_id":0})
+    db = client["ml"]
+    col = db["today"]
+    today = datetime.datetime.today().strftime("%d%m%Y")
+    hero = col.find_one({"Date": today}, {"_id": 0})
+
+    if not hero:
+        heroidx = random.randint(1, 123)
+        hero = conn.find_one({"Serial": heroidx}, {"_id":0})
+        hero["Date"] = today
+        col.insert_one(hero)
+
+
     #print(hero)
     return hero
 
@@ -41,7 +51,7 @@ def doiwin(g, ans, attempt, conn):
     
     guess = conn.find_one({"Name": g}, {"_id": 0, "Serial": 0})
     corrects = {}
-    print(guess, ans)
+    #print(guess, ans)
     if guess["Name"] == ans["Name"]:
         print('win')
     else:
@@ -82,9 +92,9 @@ def doiwin(g, ans, attempt, conn):
                 corrects[header] = False
         
     #guess["Attempt"] = attempt
-    print(guess, corrects)
+    #print(guess, corrects)
     
-    print(guess, corrects)
+    #print(guess, corrects)
     return guess, corrects
 
 

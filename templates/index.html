@@ -8,23 +8,13 @@
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Fetch the IP address from the API
-            fetch("https://api.ipify.org?format=json")
-                .then(response => response.json())
-                .then(data => {
-                    // Display the IP address on the screen
-                    console.log(data.ip);
-                })
-                .catch(error => {
-                    console.error("Error fetching IP address:", error);
-                });
-            });
+        
 
         function doiwin() {
             
             var guess = document.getElementById("hero").value;
             console.log(guess);
+            document.getElementById("hero").value = "";
             $.ajax({
                 type: "POST",
                 url: "/",
@@ -33,7 +23,7 @@
                 dataType: 'json',
                 success: function(result) {
                     var guess = result["guess"];
-                    console.log(guess);
+                    //console.log(guess);
                     var corrects = result["corrects"];
                     //var headers = result["headers"];
 
@@ -56,9 +46,11 @@
                             }
                         } else if (i == 4) {
                             if (corrects[i] == "higher") {
-                                cell.backgroundImage = "url(static/images/arrowup.png)";
+                                cell.bgColor = "Red";
+                                cell.innerHTML = cell.innerHTML + "↑";
                             } else if (corrects[i] == "lower") {
-                                cell.backgroundImage = "url(static/images/arrowdown.png)";
+                                cell.bgColor = "Red";
+                                cell.innerHTML = cell.innerHTML + "↓";
                             } else {
                                 cell.bgColor = "Green";
                             }
