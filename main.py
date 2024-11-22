@@ -101,7 +101,11 @@ def doiwin(g, ans, attempt, conn):
 
 app = Flask(__name__)
 attempt = 1
-answer = ''
+
+conn = connect_db()
+answer = generate_hero(conn)
+client.close()
+
 headers = ["Attempt","Hero Name","Hero Role","Hero Type","Hero Lane","Release Year","Gold","Diamond","Race", "Gender"]
 totalguess = []
 totalcorrects = []
@@ -139,13 +143,6 @@ def index():
         return jsonify(result)
     else:
         
-        conn = connect_db()
-        answer = generate_hero(conn)
-        print(answer)
-        client.close()
-        totalguess = []
-        totalcorrects = []
-        attempt = 1
         return render_template('index.html', totalguess=[], totalcorrects=[], headers=headers)
            
 
