@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, jsonify
+from flask import Flask, render_template, request, jsonify
 import datetime
 import pymongo
 import random
@@ -106,7 +106,7 @@ conn = connect_db()
 answer = generate_hero(conn)
 client.close()
 
-headers = ["Attempt","Hero Name","Hero Role","Hero Type","Hero Lane","Release Year","Gold","Diamond","Race", "Gender"]
+headers = ["Attempt","Hero Name","Hero Role","Hero Type","Hero Lane","Release Year","Battle Points","Diamond","Race", "Gender"]
 totalguess = []
 totalcorrects = []
 
@@ -122,7 +122,7 @@ def index():
         
         conn = connect_db()
         hero = request.get_json()[0]["hero"]
-        # print(all_heroes(conn))
+        print(all_heroes(conn))
         if {"Name": hero} in all_heroes(conn):
 
             guess, corrects = doiwin(hero, answer, attempt, conn)

@@ -8,7 +8,26 @@
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        
+        window.onload=function(){
+            var SearchBar = document.getElementById("hero");
+            SearchBar.addEventListener("input", updateValue);
+        }
+        const heroes = [{'Name': 'Saber'}, {'Name': 'Karina'}, {'Name': 'Akai'}, {'Name': 'Bruno'}, {'Name': 'Moskov'}, {'Name': 'Diggie'}, {'Name': 'Zhask'}, {'Name': 'Pharsa'}, {'Name': 'Valir'}, {'Name': 'Vale'}, {'Name': 'Lunox'}, {'Name': 'Kimmy'}, {'Name': 'Harith'}, {'Name': 'Minsitthar'}, {'Name': 'Kadita'}, {'Name': 'Badang'}, {'Name': 'Khufra'}, {'Name': 'Granger'}, {'Name': 'Guinevere'}, {'Name': 'Terizla'}, {'Name': 'X.Borg'}, {'Name': 'Silvanna'}, {'Name': 'Benedetta'}, {'Name': 'Phoveus'}, {'Name': 'Aamon'}, {'Name': 'Miya'}, {'Name': 'Nana'}, {'Name': 'Franco'}, {'Name': 'Rafaela'}, {'Name': 'Layla'}, {'Name': 'Minotaur'}, {'Name': 'Lolita'}, {'Name': 'Gord'}, {'Name': 'Ruby'}, {'Name': 'Johnson'}, {'Name': 'Aurora'}, {'Name': 'Lapu-Lapu'}, {'Name': 'Irithel'}, {'Name': 'Lancelot'}, {'Name': 'Hylos'}, {'Name': 'Helcurt'}, {'Name': 'Lesley'}, {'Name': 'Angela'}, {'Name': 'Hanabi'}, {'Name': 'Selena'}, {'Name': 'Claude'}, {'Name': 'Faramis'}, {'Name': 'Esmeralda'}, {'Name': 'Ling'}, {'Name': 'Cecilion'}, {'Name': 'Brody'}, {'Name': 'Yve'}, {'Name': 'Paquito'}, {'Name': 'Natan'}, {'Name': 'Yin'}, {'Name': 'Xavier'}, {'Name': 'Julian'}, {'Name': 'Joy'}, {'Name': 'Ixia'}, {'Name': 'Odette'}, {'Name': 'Tigreal'}, {'Name': 'Alucard'}, {'Name': 'Clint'}, {'Name': 'Zilong'}, {'Name': 'Fanny'}, {'Name': 'Kagura'}, {'Name': 'Chou'}, {'Name': 'Sun'}, {'Name': 'Cyclops'}, {'Name': 'Estes'}, {'Name': 'Hilda'}, {'Name': 'Roger'}, {'Name': 'Gatotkaca'}, {'Name': 'Jawhead'}, {'Name': 'Uranus'}, {'Name': "Chang'e"}, {'Name': 'Leomord'}, {'Name': 'Hanzo'}, {'Name': 'Belerick'}, {'Name': 'Lylia'}, {'Name': 'Masha'}, {'Name': 'Carmilla'}, {'Name': 'Atlas'}, {'Name': 'Popol'}, {'Name': 'Luo Yi'}, {'Name': 'Barats'}, {'Name': 'Gloo'}, {'Name': 'Valentina'}, {'Name': 'Edith'}, {'Name': 'Fredrinn'}, {'Name': 'Novaria'}, {'Name': 'Balmond'}, {'Name': 'Alice'}, {'Name': 'Bane'}, {'Name': 'Eudora'}, {'Name': 'Hayabusa'}, {'Name': 'Natalia'}, {'Name': 'Alpha'}, {'Name': 'Yi Sun-shin'}, {'Name': 'Vexana'}, {'Name': 'Karrie'}, {'Name': 'Harley'}, {'Name': 'Grock'}, {'Name': 'Argus'}, {'Name': 'Gusion'}, {'Name': 'Martis'}, {'Name': 'Kaja'}, {'Name': 'Aldous'}, {'Name': 'Thamuz'}, {'Name': 'Dyrroth'}, {'Name': 'Baxia'}, {'Name': 'Wanwan'}, {'Name': 'Yu Zhong'}, {'Name': 'Khaleed'}, {'Name': 'Mathilda'}, {'Name': 'Beatrix'}, {'Name': 'Aulus'}, {'Name': 'Floryn'}, {'Name': 'Melissa'}, {'Name': 'Arlott'}, {'Name': 'Freya'}];
+
+
+        function updateValue(e) {
+            var list = document.getElementById("choose");
+            list.innerHTML = '';
+            for (idx in heroes) {
+                if (heroes[idx]["Name"].startsWith(e.target.value)) {
+                    //console.log(heroes[idx]);
+                    var option = document.createElement('option');
+                    option.value = heroes[idx]["Name"];
+                    list.appendChild(option);
+                } 
+            }
+
+        }
 
         function doiwin() {
             
@@ -70,7 +89,11 @@
         <div>
         <h2>Input Guess</h2>
         
-        <input type="text" name="hero" id="hero"></input>
+        <input type="text" name="hero" id="hero" list="choose"></input>
+        <datalist id="choose">
+
+        </datalist>
+
         <br>
         <input type="submit" onclick="doiwin()">
         </form>
