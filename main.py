@@ -106,7 +106,7 @@ conn = connect_db()
 answer = generate_hero(conn)
 client.close()
 
-headers = ["Attempt","Hero Name","Hero Role","Hero Type","Hero Lane","Release Year","Battle Points","Diamond","Race", "Gender"]
+headers = ["Hero Name","Hero Role","Hero Type","Hero Lane","Release Year","Battle Points","Diamond","Race", "Gender"]
 totalguess = []
 totalcorrects = []
 
@@ -137,8 +137,7 @@ def index():
         client.close()
         result = {"guess": guess,
                   "corrects": corrects,
-                  "headers": h,
-                  "attempt": attempt-1}
+                  "headers": h}
         
         return jsonify(result)
     else:

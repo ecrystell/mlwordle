@@ -48,12 +48,12 @@
 
                     var table = document.getElementById("submission");
                     var row = table.insertRow(1);
-                    var attempt = row.insertCell(0);
-                    attempt.innerHTML = result["attempt"];
+                    //var attempt = row.insertCell(0);
+                    //attempt.innerHTML = result["attempt"];
 
                     // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
                     for (var i = 0; i < guess.length; i++) {
-                        var cell = row.insertCell(i+1);
+                        var cell = row.insertCell(i);
                         cell.innerHTML = guess[i];
                         if (i == 2) {
                             if (corrects[i] == true) {
